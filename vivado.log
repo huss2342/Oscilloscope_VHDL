@@ -1,0 +1,193 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Apr 22 21:28:06 2024
+# Process ID: 38704
+# Current directory: C:/Users/Navi/Documents/ASchool/462/project completion/newuart
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent42704 C:\Users\Navi\Documents\ASchool\462\project completion\newuart\homework1.xpr
+# Log file: C:/Users/Navi/Documents/ASchool/462/project completion/newuart/vivado.log
+# Journal file: C:/Users/Navi/Documents/ASchool/462/project completion/newuart\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/Navi/Documents/ASchool/462/newuart/newuart' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+COMPRESS TRUE [current_design]
+WARNING: [Vivado 12-628] No current design set.
+invalid command name "COMPRESS"
+-g compress
+invalid command name "-g"
+set_property -name {STEPS.WRITE_BITSTREAM.ARGS.MORE OPTIONS} -value {-g compress} -objects [get_runs impl_1]
+set_property STEPS.WRITE_BITSTREAM.ARGS.BIN_FILE true [get_runs impl_1]
+set_property {STEPS.WRITE_BITSTREAM.ARGS.MORE OPTIONS} {} [get_runs impl_1]
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
+[Mon Apr 22 21:36:30 2024] Launched synth_1...
+Run output will be captured here: C:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'mydcm1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0.dcp' for cell 'dmaengine1/myxadc_inst/xadc_inst'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.gen/sources_1/ip/fifo_generator_0/fifo_generator_0.dcp' for cell 'uart1/myuartfifo'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'vga1/myram'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1183.152 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 621 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'dmaengine1/myxadc_inst/xadc_inst/U0'
+Finished Parsing XDC File [c:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'dmaengine1/myxadc_inst/xadc_inst/U0'
+Parsing XDC File [c:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'mydcm1/inst'
+Finished Parsing XDC File [c:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'mydcm1/inst'
+Parsing XDC File [c:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'mydcm1/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+WARNING: [Vivado 12-2489] -input_jitter contains time 0.833330 which will be rounded to 0.833 to ensure it is an integer multiple of 1 picosecond [c:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [c:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'mydcm1/inst'
+Parsing XDC File [c:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.gen/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc] for cell 'uart1/myuartfifo/U0'
+Finished Parsing XDC File [c:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.gen/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc] for cell 'uart1/myuartfifo/U0'
+Parsing XDC File [C:/Users/Navi/Documents/ASchool/462/project completion/newuart/testbench.xdc]
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [C:/Users/Navi/Documents/ASchool/462/project completion/newuart/testbench.xdc:43]
+Finished Parsing XDC File [C:/Users/Navi/Documents/ASchool/462/project completion/newuart/testbench.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1868.258 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 161 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 33 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 128 instances
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1884.816 ; gain = 868.051
+startgroup
+set_property BITSTREAM.GENERAL.COMPRESS TRUE [get_designs synth_1]
+set_property BITSTREAM.CONFIG.CONFIGRATE 33 [get_designs synth_1]
+set_property config_mode SPIx4 [current_design]
+endgroup
+set_property target_constrs_file {C:/Users/Navi/Documents/ASchool/462/project completion/newuart/testbench.xdc} [current_fileset -constrset]
+save_constraints -force
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1921.465 ; gain = 9.059
+[Mon Apr 22 21:39:27 2024] Launched impl_1...
+Run output will be captured here: C:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 03 2020-15:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 1921.465 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210328BB15E8A
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
+[Mon Apr 22 21:42:12 2024] Launched impl_1...
+Run output will be captured here: C:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.runs/impl_1/runme.log
+create_hw_cfgmem -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [lindex [get_cfgmem_parts {n25q32-3.3v-spi-x1_x2_x4}] 0]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
+[Mon Apr 22 21:45:41 2024] Launched impl_1...
+Run output will be captured here: C:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.runs/impl_1/runme.log
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.runs/impl_1/testbench.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
+INFO: [Labtools 27-3164] End of startup status: HIGH
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+Mfg ID : c2   Memory Type : 20   Memory Capacity : 16   Device ID 1 : 0   Device ID 2 : 0
+Part identified : mx25l3233f Part selected : n25q32-3.3v
+ERROR: [Labtools 27-3291] Flash Programming Unsuccessful. Part selected n25q32-3.3v, but part mx25l3233f detected.
+ERROR: [Common 17-39] 'program_hw_cfgmem' failed due to earlier errors.
+delete_hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [get_hw_devices xc7a35t_0 ]]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [lindex [get_cfgmem_parts {mx25l3233f-spi-x1_x2_x4}] 0]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.runs/impl_1/testbench.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
+INFO: [Labtools 27-3164] End of startup status: HIGH
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+Mfg ID : c2   Memory Type : 20   Memory Capacity : 16   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:00 ; elapsed = 00:00:21 . Memory (MB): peak = 3509.059 ; gain = 0.000
+endgroup
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Navi/Documents/ASchool/462/project completion/newuart/homework1.runs/impl_1/testbench.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210328BB15E8A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210328BB15E8A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 22 21:50:49 2024...
