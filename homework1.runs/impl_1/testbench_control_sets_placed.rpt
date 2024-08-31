@@ -1,0 +1,150 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Mon Apr 22 21:40:11 2024
+| Host         : DESKTOP-TBLU0CF running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file testbench_control_sets_placed.rpt
+| Design       : testbench
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    72 |
+|    Minimum number of control sets                        |    72 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    91 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    72 |
+| >= 0 to < 4        |     7 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     5 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     5 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    54 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              94 |           42 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              58 |           27 |
+| Yes          | No                    | No                     |            1286 |          551 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             351 |          146 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------+------------------+----------------+--------------+
+|      Clock Signal     |                                                      Enable Signal                                                     |        Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------+------------------+----------------+--------------+
+|  mydcm1/inst/clk_out1 | SPI1/sclk2_out                                                                                                         | SPI1/sclk_i_1_n_0              |                1 |              1 |         1.00 |
+|  mydcm1/inst/clk_out1 | uart1/serial_out_i_1_n_0                                                                                               | pins1/srst                     |                1 |              1 |         1.00 |
+|  mydcm1/inst/clk_out1 | SPI1/cs_l_i_1_n_0                                                                                                      | pins1/srst                     |                1 |              1 |         1.00 |
+|  mydcm1/inst/clk_out1 | SPI1/mosi1_out                                                                                                         | pins1/srst                     |                1 |              1 |         1.00 |
+|  mydcm1/inst/clk_out2 |                                                                                                                        | vga1/ltOp                      |                1 |              1 |         1.00 |
+|  mydcm1/inst/clk_out2 | vga1/eqOp                                                                                                              |                                |                1 |              1 |         1.00 |
+|  mydcm1/inst/clk_out2 |                                                                                                                        | vga1/r_i_1_n_0                 |                2 |              3 |         1.50 |
+|  mydcm1/inst/clk_out1 | dmaengine1/myxadc_inst/xadc_inst/drdy_out                                                                              |                                |                3 |              8 |         2.67 |
+|  mydcm1/inst/clk_out1 | uart1/myuartfifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/E[0]                  | pins1/srst                     |                2 |              8 |         4.00 |
+|  mydcm1/inst/clk_out1 | dmaengine1/tx_busy_reg_1[0]                                                                                            | pins1/srst                     |                4 |              8 |         2.00 |
+|  mydcm1/inst/clk_out1 | dmaengine1/E[0]                                                                                                        | pins1/srst                     |                4 |              8 |         2.00 |
+|  mydcm1/inst/clk_out2 | vga1/eqOp                                                                                                              | vga1/v                         |                3 |              9 |         3.00 |
+|  mydcm1/inst/clk_out2 |                                                                                                                        | vga1/eqOp                      |                4 |             10 |         2.50 |
+|  mydcm1/inst/clk_out1 | uart1/counter[0]_i_2_n_0                                                                                               | uart1/counter[0]_i_1_n_0       |                3 |             12 |         4.00 |
+|  mydcm1/inst/clk_out2 |                                                                                                                        |                                |               10 |             12 |         1.20 |
+|  mydcm1/inst/clk_out1 | SPI1/tx_busy                                                                                                           | SPI1/tx_counter[0]_i_1_n_0     |                4 |             13 |         3.25 |
+|  mydcm1/inst/clk_out1 | dmaengine1/tx_busy_reg                                                                                                 | i2c1/tx_counter[0]_i_1__1_n_0  |                4 |             13 |         3.25 |
+|  mydcm1/inst/clk_out1 | dmaengine1/tx_busy_reg_2                                                                                               | uart1/tx_counter[0]_i_1__0_n_0 |                4 |             13 |         3.25 |
+|  mydcm1/inst/clk_out1 | uart1/myuartfifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/ram_empty_fb_i_reg[0] | pins1/srst                     |                7 |             24 |         3.43 |
+|  mydcm1/inst/clk_out1 | uart1/myuartfifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                          | pins1/srst                     |                5 |             24 |         4.80 |
+|  mydcm1/inst/clk_out1 | dmaengine1/tx_busy6_out                                                                                                | pins1/srst                     |                7 |             24 |         3.43 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[5][0]                                                                             |                                |               16 |             30 |         1.88 |
+|  mydcm1/inst/clk_out1 | dmaengine1/done_reg1                                                                                                   | pins1/srst                     |                5 |             31 |         6.20 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[3][0]                                                                             |                                |               21 |             32 |         1.52 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/ir_reg[29]_0[0]                                                                                        |                                |               14 |             32 |         2.29 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_22[0]                                                                          |                                |               15 |             32 |         2.13 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_30[0]                                                                          |                                |               21 |             32 |         1.52 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_28[0]                                                                          |                                |               16 |             32 |         2.00 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_24[0]                                                                          |                                |               10 |             32 |         3.20 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_4[0]                                                                           |                                |               10 |             32 |         3.20 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_8[0]                                                                           |                                |               20 |             32 |         1.60 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_26[0]                                                                          |                                |               14 |             32 |         2.29 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_27[0]                                                                          |                                |               16 |             32 |         2.00 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_6[0]                                                                           |                                |               15 |             32 |         2.13 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_5[0]                                                                           |                                |               11 |             32 |         2.91 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_9[0]                                                                           |                                |               22 |             32 |         1.45 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_1[0]                                                                           |                                |                8 |             32 |         4.00 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_3[0]                                                                           |                                |               11 |             32 |         2.91 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_20[0]                                                                          |                                |                9 |             32 |         3.56 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_29[0]                                                                          |                                |               14 |             32 |         2.29 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_25[0]                                                                          |                                |               12 |             32 |         2.67 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_23[0]                                                                          |                                |               19 |             32 |         1.68 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_21[0]                                                                          |                                |               12 |             32 |         2.67 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_7[0]                                                                           |                                |               15 |             32 |         2.13 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrccontrol/Q[2]                                                                                                 |                                |               16 |             32 |         2.00 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrccontrol/FSM_onehot_state_reg[1]_0[0]                                                                         |                                |               13 |             32 |         2.46 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrccontrol/E[0]                                                                                                 |                                |               28 |             32 |         1.14 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_13[0]                                                                          |                                |               11 |             32 |         2.91 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/E[0]                                                                                                   | pins1/srst                     |               20 |             32 |         1.60 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_0[0]                                                                           |                                |                7 |             32 |         4.57 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_11[0]                                                                          |                                |               10 |             32 |         3.20 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_10[0]                                                                          |                                |                8 |             32 |         4.00 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_12[0]                                                                          |                                |               12 |             32 |         2.67 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_14[0]                                                                          |                                |               13 |             32 |         2.46 |
+|  mydcm1/inst/clk_out1 | dmaengine1/g0_b1_i_1_0[0]                                                                                              | pins1/srst                     |               14 |             32 |         2.29 |
+|  mydcm1/inst/clk_out1 | dmaengine1/g0_b1_i_4_0[0]                                                                                              | pins1/srst                     |               24 |             32 |         1.33 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_31[0]                                                                          |                                |               25 |             32 |         1.28 |
+|  mydcm1/inst/clk_out1 | dmaengine1/done_reg2                                                                                                   | pins1/srst                     |                8 |             32 |         4.00 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_15[0]                                                                          |                                |               15 |             32 |         2.13 |
+|  mydcm1/inst/clk_out1 | dmaengine1/dir0                                                                                                        | pins1/srst                     |               24 |             32 |         1.33 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_16[0]                                                                          |                                |                7 |             32 |         4.57 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_17[0]                                                                          |                                |               15 |             32 |         2.13 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_18[0]                                                                          |                                |                9 |             32 |         3.56 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_19[0]                                                                          |                                |               12 |             32 |         2.67 |
+|  mydcm1/inst/clk_out1 | rsrc0/rsrcirreg/FSM_onehot_state_reg[4]_2[0]                                                                           |                                |                9 |             32 |         3.56 |
+|  mydcm1/inst/clk_out1 |                                                                                                                        | pins1/srst                     |               20 |             44 |         2.20 |
+|  mydcm1/inst/clk_out1 | dmaengine1/word_count                                                                                                  |                                |               16 |             63 |         3.94 |
+|  mydcm1/inst/clk_out1 |                                                                                                                        |                                |               32 |             82 |         2.56 |
+|  mydcm1/inst/clk_out1 | dmaengine1/myram_i_12_0                                                                                                |                                |               32 |            128 |         4.00 |
+|  mydcm1/inst/clk_out1 | dmaengine1/myarray_reg_0_255_0_0_i_2_0                                                                                 |                                |               32 |            128 |         4.00 |
+|  mydcm1/inst/clk_out1 | dmaengine1/myarray_reg_0_255_0_0_i_2_1                                                                                 |                                |               32 |            128 |         4.00 |
+|  mydcm1/inst/clk_out1 | dmaengine1/myram_i_12_1                                                                                                |                                |               32 |            128 |         4.00 |
++-----------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------+------------------+----------------+--------------+
+
+
